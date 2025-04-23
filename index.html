@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript task1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script src="index.js"></script>
+
+
+    <!-- 1. Age to Days converter : When a user enters age (in years), the converter will convert it to days.. -->
+
+    <div class="container-1">
+        <h1> Convert age into days</h1>
+        <label for="age">Enter your age kindly</label>
+        <input type="number" id="age">
+        <button onclick="convertAge()">Convert the age </button>
+        <p id="Ageresult"></p>
+        
+        </div>
+
+           <!-- 2. Hours to seconds converter -->
+           <div class="container-1">
+            <h1>Hours into second</h1>
+            <label for="hours">Convert Hours into Seconds</label>
+            <input type="text" id="hours">
+            <button onclick="convert()"> Convert hours into second</button>
+            <p id="hourresult"></p>
+         </div>
+         <hr style="border: none; height: 3px; background-color: rgb(5, 5, 5);">
+         <!-- Ask user to enter his/her name( in lowercase only), and then display the name in such a way that the first letter of the name must be capitalised.. -->
+
+         <div class="container-1">
+            <h1>Capitalize your Name</h1>
+            <label for="nameInput">Enter your name (lowercase only):</label>
+            <input type="text" id="nameInput">
+            <button onclick="capitalizeName()">Capitalize your Name</button>
+            <p id="result"></p>
+        </div>
+        <hr style="border: none; height: 3px; background-color: rgb(5, 5, 5);">
+
+        <!-- 5. Create a function to calculate BMI(Body-Mass-Index) by asking user to enter his/her weight and height -->
+
+   <div class="container-2">
+        <h1>BMI Calculator</h1>
+        <div>
+            <label for="weight">Weight (kg):</label>
+            <input type="number" id="weight" placeholder="Enter weight in kg">
+        </div>
+        <div>
+            <label for="height">Height (cm):</label>
+            <input type="number" id="height" placeholder="Enter height in cm">
+        </div>
+        <button onclick="calculateBMI()">Calculate BMI</button>
+        <p id="finalresult"></p>
+    </div>
+
+     
+
+
+
+
+
+
+
+</body>
+</html>
