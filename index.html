@@ -3,67 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>javascript task1</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
 </head>
 <body>
     <script src="index.js"></script>
+    <h1>Age to Days Converter</h1>
+    <p>Enter your age in years:</p>
+    <input type="number" id="ageInput" min="0" placeholder="Type your age">
+    <button onclick="convertAge()">Convert to Days</button>
+    <div id="result"></div>
+    <hr style="border: none; height: 3px; background-color: rgb(5, 5, 5);">
 
+    <!-- ........................... -->
+    <h2>Simple Hours to Seconds Converter</h2>
+    
+    <input type="number" id="hours" placeholder="Enter hours">
+    <button onclick="convert()">Convert</button>
+    
+    <p id="result1"></p>
+    <hr style="border: none; height: 3px; background-color: rgb(5, 5, 5);">
+    <!-- ...................... -->
+    <h2>Find Next Number in Array</h2>
 
-    <!-- 1. Age to Days converter : When a user enters age (in years), the converter will convert it to days.. -->
-
-    <div class="container-1">
-        <h1> Convert age into days</h1>
-        <label for="age">Enter your age kindly</label>
-        <input type="number" id="age">
-        <button onclick="convertAge()">Convert the age </button>
-        <p id="Ageresult"></p>
-        
-        </div>
-
-           <!-- 2. Hours to seconds converter -->
-           <div class="container-1">
-            <h1>Hours into second</h1>
-            <label for="hours">Convert Hours into Seconds</label>
-            <input type="text" id="hours">
-            <button onclick="convert()"> Convert hours into second</button>
-            <p id="hourresult"></p>
-         </div>
-         <hr style="border: none; height: 3px; background-color: rgb(5, 5, 5);">
-         <!-- Ask user to enter his/her name( in lowercase only), and then display the name in such a way that the first letter of the name must be capitalised.. -->
-
-         <div class="container-1">
-            <h1>Capitalize your Name</h1>
-            <label for="nameInput">Enter your name (lowercase only):</label>
-            <input type="text" id="nameInput">
-            <button onclick="capitalizeName()">Capitalize your Name</button>
-            <p id="result"></p>
-        </div>
-        <hr style="border: none; height: 3px; background-color: rgb(5, 5, 5);">
-
-        <!-- 5. Create a function to calculate BMI(Body-Mass-Index) by asking user to enter his/her weight and height -->
-
-   <div class="container-2">
-        <h1>BMI Calculator</h1>
-        <div>
-            <label for="weight">Weight (kg):</label>
-            <input type="number" id="weight" placeholder="Enter weight in kg">
-        </div>
-        <div>
-            <label for="height">Height (cm):</label>
-            <input type="number" id="height" placeholder="Enter height in cm">
-        </div>
-        <button onclick="calculateBMI()">Calculate BMI</button>
-        <p id="finalresult"></p>
+    <p>Click the button to find what comes after 8 in [5, 8, 12, 4, 9, 3]</p>
+    
+    <button onclick="findNext()">Find Next Number</button>
+    
+    <p id="result2"></p>
+     <hr style="border: none; height: 3px; background-color: rgb(5, 5, 5);">
+     <!-- ........................... -->
+     <h2>Enter Your Full Name (lowercase only)</h2>
+     <input type="text" id="nameInput" placeholder="e.g. john doe">
+     <button onclick="formatName()">Format Name</button>
+     <div id="result3"></div>
+     <hr style="border: none; height: 3px; background-color: rgb(5, 5, 5);">
+     <!-- ....................... -->
+      <h2>Convert height and weight</h2>
+     <div class="input-group">
+        <label for="weight">Weight (kg):</label>
+        <input type="number" id="weight" placeholder="Enter weight in kg">
     </div>
-
+    
+    <div class="input-group">
+        <label for="height">Height (m):</label>
+        <input type="number" id="height" placeholder="Enter height in meters">
+    </div>
+    
+    <button onclick="calculateBMI()">Calculate BMI</button>
+    
+    <div id="result4"></div>
+    <hr style="border: none; height: 3px; background-color: rgb(5, 5, 5);">
+    <!-- .................................. -->
      
-
-
-
-
-
-
-
+    
 </body>
 </html>

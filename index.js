@@ -27,23 +27,17 @@ function convertAge(){
           }
 
 
-          // captialized your name..
-          function capitalizeName() {
-    // Get the input value
-    const name = document.getElementById('nameInput').value.trim();
-    
-  //  possibilities...
-    if (name === '') {
-        document.getElementById('result').textContent = 'Please enter your name';
-        return;
-    }
-    
-  //  this is used for captalized the letter lets 0 first isi tarh 2 4 it convert the 4 word capital
-    const capitalized = name.charAt(0).toUpperCase() + name.slice(1);
-    
-    // final the result
-    document.getElementById('result').textContent = `Your capitalized name: ${capitalized}`;
+function capitalizeName() {
+  let userName = document.getElementById("nameInput").value.toLowerCase();
+  let capitalized = userName.split(' ').map(name => 
+      name.charAt(0).toUpperCase() + name.slice(1)
+  ).join(' ');
+  document.getElementById("result").innerText = capitalized;
 }
+
+
+
+
 
 // 5. Create a function to calculate BMI(Body-Mass-Index) by asking user to enter his/her weight and height
         function calculateBMI() {
@@ -67,4 +61,4 @@ function convertAge(){
         }
           
         
-        
+        console.log(123);
