@@ -119,3 +119,26 @@ function runDemo() {
   document.getElementById("output").innerHTML = 
     `Array: [${arr.join(", ")}]\nFirst: ${first} | Last: ${last}`;
 }
+// ...................
+Pretend there are three text boxes. The user will provide integer numbers and the addition of two text-boxes will be shown in the third text-box. When the user input an integer in the first text-box, the resultant (third) text-box should display answer as NaN. After providing an input into the second text-box the addition result should be displayed in the third text-box. [Hint: Use Event handling concept]:
+document.addEventListener('DOMContentLoaded', function() {
+  const num1 = document.getElementById('num1');
+  const num2 = document.getElementById('num2');
+  const result = document.getElementById('result7');
+  
+  function updateResult() {
+      // Get values (empty string becomes 0)
+      const val1 = num1.value === '' ? NaN : Number(num1.value);
+      const val2 = num2.value === '' ? NaN : Number(num2.value);
+      
+      if (isNaN(val1) || isNaN(val2)) {
+          result.value = 'NaN';
+      } else {
+          result.value = val1 + val2;
+      }
+  }
+  
+
+  num1.addEventListener('input', updateResult);
+  num2.addEventListener('input', updateResult);
+});
