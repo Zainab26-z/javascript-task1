@@ -24,7 +24,6 @@ function convert() {
   const hours = document.getElementById('hours').value;
   const hoursNum = parseFloat(hours);
   
-  // Check if input is valid
   if (isNaN(hoursNum)) {
       document.getElementById('result').textContent = "Please enter a valid number!";
       console.log("Invalid input - not a number");
@@ -33,8 +32,7 @@ function convert() {
   
   // Calculate seconds (1 hour = 3600 seconds)
   const seconds = hoursNum * 3600;
-  
-  // Display result
+
   document.getElementById('result1').textContent = 
       `${hoursNum} hours = ${seconds} seconds`;
   
@@ -86,16 +84,15 @@ function formatName() {
   console.log("Formatted name:", formattedName);
 }
 // .......................
+// . Create a function to calculate BMI(Body-Mass-Index) by asking user to enter his/her weight and height.
 function calculateBMI() {
   // Get input values
   const weight = parseFloat(document.getElementById('weight').value);
   const height = parseFloat(document.getElementById('height').value);
   
-  // Log inputs to console
   console.log('Weight:', weight, 'kg');
   console.log('Height:', height, 'm');
   
-  // Check if inputs are valid
   if (isNaN(weight) || isNaN(height) || weight <= 0 || height <= 0) {
       document.getElementById('result').innerHTML = 'Please enter valid weight and height!';
       console.log('Invalid inputs');
@@ -112,15 +109,13 @@ function calculateBMI() {
   // Log BMI to console
   console.log('Calculated BMI:', bmi.toFixed(1));
   
-  // Give simple interpretation
-  if (bmi < 18.5) {
-      console.log('Category: Underweight');
-  } else if (bmi < 25) {
-      console.log('Category: Normal weight');
-  } else if (bmi < 30) {
-      console.log('Category: Overweight');
-  } else {
-      console.log('Category: Obese');
-  }
+  
 }
 // ..........................
+// Randomly generate an array and then create a function to pick 1st and last element of that generated array..
+function runDemo() {
+  const arr = Array(5).fill().map(() => Math.floor(Math.random() * 10) + 1);
+  const first = arr[0], last = arr[arr.length - 1];
+  document.getElementById("output").innerHTML = 
+    `Array: [${arr.join(", ")}]\nFirst: ${first} | Last: ${last}`;
+}
